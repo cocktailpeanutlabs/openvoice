@@ -16,12 +16,6 @@ module.exports = {
       "message": "git clone https://huggingface.co/spaces/cocktailpeanut/OpenVoice app",
     }
   }, {
-    "method": "fs.download",
-    "params": {
-      "uri": "https://myshell-public-repo-hosting.s3.amazonaws.com/checkpoints_1226.zip",
-      "dir": "app"
-    }
-  }, {
     "method": "shell.run",
     "params": {
       "path": "app",
@@ -30,6 +24,12 @@ module.exports = {
         "pip install -r requirements_locally.txt",
         "{{(gpu === 'nvidia' ? self.cmds.nvidia : (gpu === 'amd' ? self.cmds.amd : self.cmds.default))}}"
       ]
+    }
+  }, {
+    "method": "fs.download",
+    "params": {
+      "uri": "https://myshell-public-repo-hosting.s3.amazonaws.com/checkpoints_1226.zip",
+      "path": "app/ckpt.zip"
     }
   }, {
     "method": "notify",
