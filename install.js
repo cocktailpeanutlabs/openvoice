@@ -16,6 +16,12 @@ module.exports = {
       "message": "git clone https://huggingface.co/spaces/cocktailpeanut/OpenVoice app",
     }
   }, {
+    "method": "fs.download",
+    "params": {
+      "uri": "https://myshell-public-repo-hosting.s3.amazonaws.com/checkpoints_1226.zip",
+      "dir": "app"
+    }
+  }, {
     "method": "shell.run",
     "params": {
       "path": "app",
