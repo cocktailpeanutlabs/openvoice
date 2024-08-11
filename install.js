@@ -28,7 +28,7 @@ module.exports = {
   }, {
     "method": "fs.download",
     "params": {
-      "uri": "https://myshell-public-repo-hosting.s3.amazonaws.com/checkpoints_1226.zip",
+      "uri": "https://myshell-public-repo-host.s3.amazonaws.com/openvoice/checkpoints_1226.zip"
       "path": "app/ckpt.zip"
     }
   }, {
