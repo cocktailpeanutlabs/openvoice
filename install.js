@@ -16,8 +16,8 @@ module.exports = async (kernel) => {
     } else if (kernel.gpu === 'amd') {
       cmd = "uv pip install torch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 --index-url https://download.pytorch.org/whl/rocm6.2"
     } 
-  //}
-mo//dule.exports = {
+  }
+//module.exports = {
   //"cmds": {
   //  "nvidia": "pip install torch torchvision torchaudio xformers --index-url https://download.pytorch.org/whl/cu118",
   //  "amd": "pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm5.6",
@@ -41,7 +41,7 @@ mo//dule.exports = {
         "path": "app",
         "venv": "env",
         "message": [
-          "pip install -r requirements_locally.txt",
+          "uv pip install -r requirements_locally.txt",
           cmd
 //          "{{(gpu === 'nvidia' ? self.cmds.nvidia : (gpu === 'amd' ? self.cmds.amd : self.cmds.default))}}"
         ]
